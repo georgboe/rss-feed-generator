@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	parser "github.com/podpalinc/rss-feed-generator/parser"
+	parser "github.com/georgboe/rss-feed-generator/parser"
 	"github.com/stretchr/testify/assert"
 )
 

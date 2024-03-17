@@ -5,11 +5,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/podpalinc/rss-feed-generator/parser/atom"
-	ext "github.com/podpalinc/rss-feed-generator/parser/extensions"
-	"github.com/podpalinc/rss-feed-generator/parser/json"
-	"github.com/podpalinc/rss-feed-generator/parser/rss"
-	"github.com/podpalinc/rss-feed-generator/parser/util"
+	"github.com/georgboe/rss-feed-generator/parser/atom"
+	ext "github.com/georgboe/rss-feed-generator/parser/extensions"
+	"github.com/georgboe/rss-feed-generator/parser/json"
+	"github.com/georgboe/rss-feed-generator/parser/rss"
+	"github.com/georgboe/rss-feed-generator/parser/util"
 )
 
 // Translator converts a particular feed (atom.Feed or rss.Feed of json.Feed)

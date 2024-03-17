@@ -10,8 +10,8 @@ import (
 	"time"
 	"unicode/utf8"
 
+	"github.com/georgboe/rss-feed-generator/html2text"
 	"github.com/pkg/errors"
-	"github.com/podpalinc/rss-feed-generator/html2text"
 )
 
 // Constants to use while generating podcast feed.
@@ -98,16 +98,17 @@ func (p *Podcast) AddTitle(title string) {
 }
 
 // AddAuthor adds the specified Author to the podcast.
-// func (p *Podcast) AddAuthor(name, email string) {
-// 	if len(email) == 0 {
-// 		return
-// 	}
-// 	p.ManagingEditor = parseAuthorNameEmail(&Author{
-// 		Name:  name,
-// 		Email: email,
-// 	})
-// 	p.IAuthor = p.ManagingEditor
-// }
+//
+//	func (p *Podcast) AddAuthor(name, email string) {
+//		if len(email) == 0 {
+//			return
+//		}
+//		p.ManagingEditor = parseAuthorNameEmail(&Author{
+//			Name:  name,
+//			Email: email,
+//		})
+//		p.IAuthor = p.ManagingEditor
+//	}
 func (p *Podcast) AddAuthor(authors []string) {
 	combinedAuthors := ""
 	for i, author := range authors {
@@ -145,73 +146,73 @@ func (p *Podcast) AddAtomLink(href string) {
 // used and will invalidate the feed if deviated from the list.  That list is
 // as follows.
 //
-//   * Arts
-//     * Design
-//     * Fashion & Beauty
-//     * Food
-//     * Literature
-//     * Performing Arts
-//     * Visual Arts
-//   * Business
-//     * Business News
-//     * Careers
-//     * Investing
-//     * Management & Marketing
-//     * Shopping
-//   * Comedy
-//   * Education
-//     * Education Technology
-//     * Higher Education
-//     * K-12
-//     * Language Courses
-//     * Training
-//   * Games & Hobbies
-//     * Automotive
-//     * Aviation
-//     * Hobbies
-//     * Other Games
-//     * Video Games
-//   * Government & Organizations
-//     * Local
-//     * National
-//     * Non-Profit
-//     * Regional
-//   * Health
-//     * Alternative Health
-//     * Fitness & Nutrition
-//     * Self-Help
-//     * Sexuality
-//   * Kids & Family
-//   * Music
-//   * News & Politics
-//   * Religion & Spirituality
-//     * Buddhism
-//     * Christianity
-//     * Hinduism
-//     * Islam
-//     * Judaism
-//     * Other
-//     * Spirituality
-//   * Science & Medicine
-//     * Medicine
-//     * Natural Sciences
-//     * Social Sciences
-//   * Society & Culture
-//     * History
-//     * Personal Journals
-//     * Philosophy
-//     * Places & Travel
-//   * Sports & Recreation
-//     * Amateur
-//     * College & High School
-//     * Outdoor
-//     * Professional
-//   * Technology
-//     * Gadgets
-//     * Podcasting
-//     * Software How-To
-//     * Tech News
-//   * TV & Film
+//   - Arts
+//   - Design
+//   - Fashion & Beauty
+//   - Food
+//   - Literature
+//   - Performing Arts
+//   - Visual Arts
+//   - Business
+//   - Business News
+//   - Careers
+//   - Investing
+//   - Management & Marketing
+//   - Shopping
+//   - Comedy
+//   - Education
+//   - Education Technology
+//   - Higher Education
+//   - K-12
+//   - Language Courses
+//   - Training
+//   - Games & Hobbies
+//   - Automotive
+//   - Aviation
+//   - Hobbies
+//   - Other Games
+//   - Video Games
+//   - Government & Organizations
+//   - Local
+//   - National
+//   - Non-Profit
+//   - Regional
+//   - Health
+//   - Alternative Health
+//   - Fitness & Nutrition
+//   - Self-Help
+//   - Sexuality
+//   - Kids & Family
+//   - Music
+//   - News & Politics
+//   - Religion & Spirituality
+//   - Buddhism
+//   - Christianity
+//   - Hinduism
+//   - Islam
+//   - Judaism
+//   - Other
+//   - Spirituality
+//   - Science & Medicine
+//   - Medicine
+//   - Natural Sciences
+//   - Social Sciences
+//   - Society & Culture
+//   - History
+//   - Personal Journals
+//   - Philosophy
+//   - Places & Travel
+//   - Sports & Recreation
+//   - Amateur
+//   - College & High School
+//   - Outdoor
+//   - Professional
+//   - Technology
+//   - Gadgets
+//   - Podcasting
+//   - Software How-To
+//   - Tech News
+//   - TV & Film
 func (p *Podcast) AddCategory(category string, subCategories []string) {
 	if len(category) == 0 {
 		return
@@ -492,33 +493,32 @@ func (p *Podcast) AddImage(url string) {
 //
 // Article minimal requirements are:
 //
-//   * Title
-//   * Description
-//   * Link
+//   - Title
+//   - Description
+//   - Link
 //
 // Audio, Video and Downloads minimal requirements are:
 //
-//   * Title
-//   * Description
-//   * Enclosure (HREF, Type and Length all required)
+//   - Title
+//   - Description
+//   - Enclosure (HREF, Type and Length all required)
 //
 // The following fields are always overwritten (don't set them):
 //
-//   * GUID
-//   * PubDateFormatted
-//   * AuthorFormatted
-//   * Enclosure.TypeFormatted
-//   * Enclosure.LengthFormatted
+//   - GUID
+//   - PubDateFormatted
+//   - AuthorFormatted
+//   - Enclosure.TypeFormatted
+//   - Enclosure.LengthFormatted
 //
 // Recommendations:
 //
-//   * Just set the minimal fields: the rest get set for you.
-//   * Always set an Enclosure.Length, to be nice to your downloaders.
-//   * Follow Apple's best practices to enrich your podcasts:
+//   - Just set the minimal fields: the rest get set for you.
+//   - Always set an Enclosure.Length, to be nice to your downloaders.
+//   - Follow Apple's best practices to enrich your podcasts:
 //     https://help.apple.com/itc/podcasts_connect/#/itc2b3780e76
-//   * For specifications of itunes tags, see:
+//   - For specifications of itunes tags, see:
 //     https://help.apple.com/itc/podcasts_connect/#/itcb54353390
-//
 func (p *Podcast) AddItem(i Item) (int, error) {
 	// initial guards for required fields
 	if len(i.Title) == 0 {

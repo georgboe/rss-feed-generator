@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"time"
 
-	ext "github.com/podpalinc/rss-feed-generator/parser/extensions"
+	ext "github.com/georgboe/rss-feed-generator/parser/extensions"
 )
 
 // Feed is an Atom Feed

@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	jsonParser "github.com/podpalinc/rss-feed-generator/parser/json"
+	jsonParser "github.com/georgboe/rss-feed-generator/parser/json"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -5,9 +5,9 @@ import (
 	"io"
 	"strings"
 
+	"github.com/georgboe/rss-feed-generator/parser/util"
+	"github.com/georgboe/rss-feed-generator/parser/xpp"
 	jsoniter "github.com/json-iterator/go"
-	"github.com/podpalinc/rss-feed-generator/parser/util"
-	"github.com/podpalinc/rss-feed-generator/parser/xpp"
 )
 
 // FeedType represents one of the possible feed

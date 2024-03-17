@@ -7,7 +7,7 @@ package podcast_test
 // 	"os"
 // 	"strconv"
 
-// 	podcast "github.com/podpalinc/rss-feed-generator"
+// 	podcast "github.com/georgboe/rss-feed-generator"
 // )
 
 // func Example_httpHandlers() {

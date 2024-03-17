@@ -5,9 +5,9 @@ import (
 	"io"
 	"strings"
 
-	ext "github.com/podpalinc/rss-feed-generator/parser/extensions"
-	"github.com/podpalinc/rss-feed-generator/parser/util"
-	"github.com/podpalinc/rss-feed-generator/parser/xpp"
+	ext "github.com/georgboe/rss-feed-generator/parser/extensions"
+	"github.com/georgboe/rss-feed-generator/parser/util"
+	"github.com/georgboe/rss-feed-generator/parser/xpp"
 )
 
 // Parser is a RSS Parser

@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/podpalinc/rss-feed-generator/parser/xpp"
+	"github.com/georgboe/rss-feed-generator/parser/xpp"
 	"golang.org/x/net/html"
 )
 

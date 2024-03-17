@@ -3,8 +3,8 @@ package util
 import (
 	"strings"
 
-	ext "github.com/podpalinc/rss-feed-generator/parser/extensions"
-	xpp "github.com/podpalinc/rss-feed-generator/parser/xpp"
+	ext "github.com/georgboe/rss-feed-generator/parser/extensions"
+	xpp "github.com/georgboe/rss-feed-generator/parser/xpp"
 )
 
 // IsExtension returns whether or not the current

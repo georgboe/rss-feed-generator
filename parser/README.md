@@ -173,8 +173,8 @@ First we must define a custom translator:
 import (
     "fmt"
 
-    "github.com/podpalinc/rss-feed-generator"
-    "github.com/podpalinc/rss-feed-generator/rss"
+    "github.com/georgboe/rss-feed-generator"
+    "github.com/georgboe/rss-feed-generator/rss"
 )
 
 type MyCustomTranslator struct {

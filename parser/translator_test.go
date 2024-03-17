@@ -9,10 +9,10 @@ import (
 	"strings"
 	"testing"
 
-	parser "github.com/podpalinc/rss-feed-generator/parser"
-	"github.com/podpalinc/rss-feed-generator/parser/atom"
-	"github.com/podpalinc/rss-feed-generator/parser/json"
-	"github.com/podpalinc/rss-feed-generator/parser/rss"
+	parser "github.com/georgboe/rss-feed-generator/parser"
+	"github.com/georgboe/rss-feed-generator/parser/atom"
+	"github.com/georgboe/rss-feed-generator/parser/json"
+	"github.com/georgboe/rss-feed-generator/parser/rss"
 	"github.com/stretchr/testify/assert"
 )
 

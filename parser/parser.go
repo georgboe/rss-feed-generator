@@ -9,9 +9,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/podpalinc/rss-feed-generator/parser/atom"
-	"github.com/podpalinc/rss-feed-generator/parser/json"
-	"github.com/podpalinc/rss-feed-generator/parser/rss"
+	"github.com/georgboe/rss-feed-generator/parser/atom"
+	"github.com/georgboe/rss-feed-generator/parser/json"
+	"github.com/georgboe/rss-feed-generator/parser/rss"
 )
 
 // ErrFeedTypeNotDetected is returned when the detection system can not figure

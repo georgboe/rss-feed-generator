@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"unicode/utf8"
 
-	"github.com/podpalinc/rss-feed-generator/html2text"
+	"github.com/georgboe/rss-feed-generator/html2text"
 )
 
 // Item represents a single entry in a podcast.

@@ -1,4 +1,4 @@
-module github.com/podpalinc/rss-feed-generator
+module github.com/georgboe/rss-feed-generator
 
 go 1.14
 

@@ -3,7 +3,7 @@ package podcast_test
 import (
 	"fmt"
 
-	podcast "github.com/podpalinc/rss-feed-generator"
+	podcast "github.com/georgboe/rss-feed-generator"
 )
 
 func ExampleNew() {
@@ -81,18 +81,18 @@ func ExamplePodcast_AddImage() {
 // 		fmt.Println("item validation error: " + err.Error())
 // 	}
 
-// 	if len(p.Items) != 1 {
-// 		fmt.Println("expected 1 item in the collection")
-// 	}
-// 	pp := p.Items[0]
-// 	fmt.Println(
-// 		pp.GUID, pp.Title, pp.Link, pp.Description,
-// 		pp.AuthorFormatted, pp.Category, pp.Comments, pp.Source, *pp.Enclosure,
-// 		pp.IAuthor, pp.IDuration, pp.IExplicit, pp.IIsClosedCaptioned,
-// 		pp.IOrder, pp.ISubtitle, pp.ISummary)
-// 	// Output:
-// 	// http://example.com/1.mp3 Episode 1 http://example.com/1.mp3 Description for Episode 1     {{ } http://example.com/1.mp3 183 183 audio/mpeg audio/mpeg} the name     A simple episode 1 &{{ } See more at <a href="http://example.com">Here</a>}
-// }
+//		if len(p.Items) != 1 {
+//			fmt.Println("expected 1 item in the collection")
+//		}
+//		pp := p.Items[0]
+//		fmt.Println(
+//			pp.GUID, pp.Title, pp.Link, pp.Description,
+//			pp.AuthorFormatted, pp.Category, pp.Comments, pp.Source, *pp.Enclosure,
+//			pp.IAuthor, pp.IDuration, pp.IExplicit, pp.IIsClosedCaptioned,
+//			pp.IOrder, pp.ISubtitle, pp.ISummary)
+//		// Output:
+//		// http://example.com/1.mp3 Episode 1 http://example.com/1.mp3 Description for Episode 1     {{ } http://example.com/1.mp3 183 183 audio/mpeg audio/mpeg} the name     A simple episode 1 &{{ } See more at <a href="http://example.com">Here</a>}
+//	}
 func ExamplePodcast_AddSummary() {
 	p := podcast.New("title", "link", podcast.Description{Text: "Description"}, nil, nil)
 
