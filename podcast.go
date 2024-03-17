@@ -699,8 +699,10 @@ func (p *Podcast) Encode(w io.Writer) error {
 	// 	atomLink = "http://www.w3.org/2005/Atom"
 	// }
 	wrapped := PodcastWrapper{
-		ITUNESNS: ITUNESNS,
-		CONTENT:  CONTENT,
+		ITUNESNS:     ITUNESNS,
+		CONTENT:      CONTENT,
+		GOOGLEPLAYNS: GOOGLEPLAYNS,
+		SPOTIFYNS:    SPOTIFYNS,
 		// ATOMNS:   atomLink,
 		Version: "2.0",
 		Channel: p,
